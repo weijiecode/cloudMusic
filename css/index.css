@@ -1,0 +1,100 @@
+/* 存放首页样式 */
+/* 样式可以理解成衣柜 */
+/* 针对class书写样式用.号查找
+.叫做类选择器 */
+body {
+    margin: 0;
+}
+.header{
+    /* 里面书写css代码 */
+    /* 100%就是借用父元素宽度百分之多少 */
+    width: 100%;
+    height: 84px;
+    background: #D43C33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.topsvg {
+    width: 142px;
+    height: 25px;
+}
+
+.btn {
+    width: 100px;
+    height: 38px;
+    background: white;
+    color: #D43C33;
+    border-radius: 20px;
+    border: none;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #efefef;
+}
+
+.navBtn {
+    width: 33.33%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+}
+
+.viewport {
+    width: 100%;
+}
+
+.screenGroup{
+    width: 300%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.screen {
+    width: 33.33%;
+}
+
+.title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.icon {
+    background-color: red;
+    width: 4px;
+    height: 20px;
+    float: left;
+    margin-right: 10px;
+}
+
+.rec {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* 一行排不下了自动到下一行 */
+    flex-wrap: wrap;
+}
+
+.rec_item {
+    width: 32.5%;
+}
+
+.rec_item>img {
+    width: 100%;
+}
+
+.rec_item>p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+
