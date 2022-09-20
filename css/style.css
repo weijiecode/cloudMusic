@@ -2,9 +2,17 @@
 /* 样式可以理解成衣柜 */
 /* 针对class书写样式用.号查找
 .叫做类选择器 */
-body {
+* {
     margin: 0;
+    padding: 0;
 }
+.topHeader {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1001;
+}
+
 .header{
     /* 里面书写css代码 */
     /* 100%就是借用父元素宽度百分之多少 */
@@ -14,7 +22,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -32,14 +40,15 @@ body {
     border: none;
 }
 
-.nav {
+.tab {
+    background-color: white;
     display: flex;
     width: 100%;
     height: 40px;
     border-bottom: 1px solid #efefef;
 }
 
-.navBtn {
+.tabBtn {
     width: 33.33%;
     text-align: center;
     line-height: 40px;
@@ -47,6 +56,8 @@ body {
 }
 
 .viewport {
+    margin-top: 125px;
+    overflow: hidden;
     width: 100%;
 }
 
@@ -54,6 +65,7 @@ body {
     width: 300%;
     display: flex;
     justify-content: space-between;
+    transition: margin-left 0.5s ease;
 }
 
 .screen {
@@ -97,4 +109,60 @@ body {
     text-align: center;
 }
 
+.openimg {
+    width: 22px;
+    height: 22px;
+    border: 2px solid red;
+    background: url(../img/index_icon_2x.png);
+    background-size: 166px 97px;
+    background-position: -24px 0;
+}
+
+.newSong>li {
+    list-style: none;
+    height: 55px;
+    padding-top: 8px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #efefef;
+    position: relative;
+    z-index: 1000;
+}
+
+.songName {
+    margin-bottom: 4px;
+}
+
+.songInfo {
+    color: gray;
+    font-size: 12px;
+
+}
+
+.sq_icon {
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    background: url(../img/index_icon_2x.png);
+    background-size: 166px 97px;
+    background-position: 0 0;
+}
+
+playicon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../img/index_icon_2x.png);
+    background-size: 166px 97px;
+    background-position: -24px 0;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.active {
+    color: #D43C33;
+
+}
 
