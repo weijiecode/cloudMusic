@@ -8,21 +8,26 @@
     <title>播放页</title>
 </head>
 <body>
+    <!-- audio是否可见是controls属性，去除为不可见 -->
+    <audio id="myAudio" src="" ></audio>
     <div class="container">
         <div class="info">
             <div class="disk">
-                <img src="../img/bg.jpeg" alt="">
+                <!-- 唱片图 -->
+                <img id="diskImg" src="" alt="">
             </div>
-
+            <!-- 歌曲名 -->
             <div class="songName">房东的猫</div>
             <div class="lyric">
                 <p>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啊</p>
             </div>
         </div>
         <div class="bg">
-            <img src="../img/bg.jpeg" alt="">
+            <img id="bgImg" src="../img/bg.jpeg" alt="">
         </div>
     </div>
 </body>
+<script src="../js/getElement.js"></script>
+<script src="../js/playMusic.js"></script>
 <script src="../js/play.js"></script>
 </html>

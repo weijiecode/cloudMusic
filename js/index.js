@@ -53,12 +53,14 @@ fetch("http://localhost:3000/personalized/newsong", {
     res.result.forEach(item => {
         str += `
         <li>
-            <p class="songName">${item.name}</p>
-            <p class="songInfo">
-                <icon class="sq_icon"></icon>
-                ${getSinger(item.song.artists)}-${item.song.album.name}
-            </p>
-            <playicon></playicon>
+            <a href="html/play.html?id=${item.id}">
+                <p class="songName">${item.name}</p>
+                <p class="songInfo">
+                    <icon class="sq_icon"></icon>
+                    ${getSinger(item.song.artists)}-${item.song.album.name}
+                </p>
+                <playicon></playicon>
+            </a>
         </li>
         `
     })

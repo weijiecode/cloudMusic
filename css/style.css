@@ -13,6 +13,11 @@
     z-index: 1001;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 .header{
     /* 里面书写css代码 */
     /* 100%就是借用父元素宽度百分之多少 */
