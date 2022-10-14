@@ -1,0 +1,29 @@
+{
+  "name": "mymusic",
+  "version": "1.0.0",
+  "description": "this is music app",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weijiecode/cloudMusic.git"
+  },
+  "keywords": [
+    "music"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weijiecode/cloudMusic/issues"
+  },
+  "homepage": "https://github.com/weijiecode/cloudMusic#readme",
+  "dependencies": {
+    "axios": "^1.1.2",
+    "wu-lyric-parser": "^1.0.0"
+  }
+}

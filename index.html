@@ -13,6 +13,7 @@
     上一级目录使用../
     下一级目录使用 / -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
 </head>
 
 <body>
@@ -139,12 +140,47 @@
                     </li>
                 </ul>
             </div>
-            <div class="screen">2</div>
-            <div class="screen">3</div>
+            <div class="screen">热歌榜单</div>
+            <div class="screen">
+                <!-- 搜索页面 -->
+                <div class="searchBox">
+                    <!-- 搜索输入框 -->
+                    <input placeholder="请搜索歌曲、歌手、专辑" id="searchInput" type="text">
+                </div>
+
+
+                <!-- 默认搜索页 -->
+                <div class="searchContainer">
+                    <!-- 默认搜索页 -->
+                    <div class="searchDefault">
+                        <p class="title">热门搜索</p>
+                        <div class="search_hot">
+                        <!-- axios获取数据 -->
+                        </div>
+                        <div class="search_value">
+                            <!-- 记录搜索数据 -->
+                            <ul>
+                                <!-- <li>
+                                    <span>哈哈哈哈</span>
+                                    <span>✖️</span>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 搜索推荐页 -->
+                    <div class="searchRec">搜索推荐页面</div>
+                    <!-- 搜索结果页 -->
+                    <div class="searchResult">搜索结果页面</div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+<script src="js/getElement.js"></script>
 <script src="js/tab.js"></script>
-<script src="js/index.js"></script>
+
 <script src="js/getSinger.js"></script>
+<script src="node_modules/axios/dist/axios.js"></script>
+<script src="js/index.js"></script>
+<script src="js/search.js"></script>
 </html>
