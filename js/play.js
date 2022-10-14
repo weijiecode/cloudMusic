@@ -39,6 +39,7 @@ fetch("http://localhost:3000/lyric"+location.search).then(
             console.log(obj.txt)
             $(".lyric>p").innerText = obj.txt
         })
+        console.log(lyric)
     }
 )
 

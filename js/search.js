@@ -45,6 +45,7 @@ $("#searchInput").onkeyup = function (e) {
 
 // 使用axios请求热门搜索关键词数据
 axios.get("http://localhost:3000/search/hot").then( data => {
+    console.log(data)
     let str =  ``
     data.data.result.hots.forEach( item => {
         str += `<span>${item.first}</span>`
