@@ -65,5 +65,6 @@ fetch("http://localhost:3000/personalized/newsong", {
         `
     })
     document.querySelector(".newSong").innerHTML = str
+    document.querySelector(".newSong1").innerHTML = str
 })
 

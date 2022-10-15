@@ -48,8 +48,8 @@ $("#searchInput").onkeyup = function (e) {
             }
             axios.all([getSongList(), singerInfo()]).then(
                 axios.spread(function (songlist, singinfo) {
-                    // console.log(songlist)
-                    // console.log(singinfo)
+                    console.log(songlist)
+                    console.log(singinfo)
                     let listStr = ``
                     songlist.data.result.songs.forEach(item => {
                         listStr += `
