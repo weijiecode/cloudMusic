@@ -45,7 +45,7 @@
     margin-top: 15px;
 }
 
-.search_value>ul>li {
+.search_value>ul>li, .searchRec>ul>li {
     padding: 10px 25px;
     box-sizing: border-box;
     border-bottom: 1px solid #e1e1e1;
@@ -53,4 +53,10 @@
     font-size: 14px;
     display: flex;
     justify-content: space-between;
+}
+
+
+.delbtn {
+    width: 25px;
+    height: 25px;
 }
