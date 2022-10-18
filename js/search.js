@@ -50,6 +50,7 @@ $("#searchInput").onkeyup = function (e) {
                 axios.spread(function (songlist, singinfo) {
                     console.log(songlist)
                     console.log(singinfo)
+                    // 渲染歌曲列表
                     let listStr = ``
                     songlist.data.result.songs.forEach(item => {
                         listStr += `
@@ -65,6 +66,44 @@ $("#searchInput").onkeyup = function (e) {
                                         </li>`
                     })
                     $('.searchResult>ul').innerHTML = listStr
+                    // 渲染歌手姓名和歌手专辑名称等信息
+                    let htmlstr = ""
+                    let myorders = singinfo.data.result.orders
+                    console.log(singinfo.data,'@')
+                    if (myorders != 0) {
+                        // 根据orders数组中的内容判断渲染什么数组
+                        for (let i = 0; i < myorders.length; i++) {
+                            if (myorders[i] == "artist") {
+                                // 数据当中有歌手
+                                htmlstr += `
+                                <div class="singer" id="singerName">
+                                <img src="${singinfo.data.result.artist[0].picUrl}" alt="" srcset="">
+                                <p class="singerName">歌手：${singinfo.data.result.artist[0].name}</p>
+                                <div class="more"> &gt </div>
+                            </div>
+                                `
+                            } else if (myorders[i] == "album") {
+                                // 数据当中有专辑信息
+                                htmlstr += `
+                                <div class="singer" id="singerName">
+                                <img src="${singinfo.data.result.album[0].picUrl}" alt="" srcset="">
+                                <p class="singerName">歌手：${singinfo.data.result.album[0].name}</p>
+                                <div class="more"> &gt </div>
+                            </div>
+                                `
+                            } else if (myorders[i] == "voice") {
+                                // 数据当中有voice信息
+                                htmlstr += `
+                                <div class="singer" id="singerName">
+                                <img src="${singinfo.data.result.voice[0].baseInfo.coverUrl}" alt="" srcset="">
+                                <p class="singerName">歌手：${singinfo.data.result.voice[0].baseInfo.name}</p>
+                                <div class="more"> &gt </div>
+                            </div>
+                                `
+                            }
+                        }
+                    }
+                    $(".singerInfo").innerHTML = htmlstr
                 })
             )
         } else {
